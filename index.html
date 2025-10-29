@@ -6,15 +6,44 @@
     <title>Document</title>
   </head>
   <style>
-    h1 {
-      font-size: 100px;
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;900&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+    html {
+      font-size: 100vmax / 1600 * 100;
+      @media (max-width: 992px) {
+        font-size: 60px;
+      }
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #222;
+      background-color: black;
+      font-size: 0.3rem;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    svg text {
+      font-size: 8rem;
       font-weight: 900;
-      color: white;
-      text-shadow: -2px -2px 0 #4a6cf7, 2px -2px 0 #4a6cf7, -2px 2px 0 #4a6cf7,
-        2px 2px 0 #4a6cf7;
+      text-transform: uppercase;
+      letter-spacing: 8px;
+
+      fill: transparent;
+      stroke: #555;
+      stroke-width: 2px;
+      text-anchor: middle;
+      dominant-baseline: middle;
     }
   </style>
   <body>
-    <h1>KANDEV</h1>
+    <svg width="100%">
+      <text x="50%" y="50%">collection kandev</text>
+    </svg>
   </body>
 </html>
